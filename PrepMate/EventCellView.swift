@@ -11,7 +11,7 @@ struct EventCellView: View {
     @Bindable var event: Event
     
     var body: some View {
-        VStack {
+        VStack(spacing: 10) {
             Text(event.title)
                 .font(.title3)
                 .lineLimit(1)
@@ -23,10 +23,19 @@ struct EventCellView: View {
                 Spacer()
                 Text("\(event.daysBetween(.now, event.dayOfEvent))")
                         .font(.system(size: 50, weight: .bold, design: .rounded))
+                        .foregroundStyle(event.dayOfEvent < Date.now ? .red : .primary)
                 
             }
             
-            Text(event.dayOfEvent.formatted(.dateTime.month().day()))
+            //TODO: Event progress function
+            ProgressView(value: 0.25) { Text("25% completed") }
+                .tint(event.hexColor)
+            
+            HStack {
+                Spacer()
+                Text("Event Date: \(event.dayOfEvent.formatted(.dateTime.month().day()))")
+                    .font(.caption)
+            }
                 
         }
         .padding()
