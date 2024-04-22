@@ -11,6 +11,14 @@
 		C16720EE2BD5BE7C00750D5B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16720ED2BD5BE7C00750D5B /* ContentView.swift */; };
 		C16720F02BD5BE7E00750D5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C16720EF2BD5BE7E00750D5B /* Assets.xcassets */; };
 		C16720F32BD5BE7E00750D5B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C16720F22BD5BE7E00750D5B /* Preview Assets.xcassets */; };
+		C16720FA2BD5BEEB00750D5B /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16720F92BD5BEEB00750D5B /* Event.swift */; };
+		C16720FC2BD5BEFD00750D5B /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16720FB2BD5BEFD00750D5B /* Todo.swift */; };
+		C16720FE2BD5C17100750D5B /* Color+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16720FD2BD5C17100750D5B /* Color+EXT.swift */; };
+		C16721002BD5C1F200750D5B /* UIColor+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16720FF2BD5C1F200750D5B /* UIColor+EXT.swift */; };
+		C16721042BD5C3EE00750D5B /* CreateEventScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16721032BD5C3EE00750D5B /* CreateEventScreen.swift */; };
+		C16721062BD5C85900750D5B /* CustomColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16721052BD5C85900750D5B /* CustomColorPickerView.swift */; };
+		C16721082BD5D60F00750D5B /* EventCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16721072BD5D60F00750D5B /* EventCellView.swift */; };
+		C167210A2BD5E79B00750D5B /* EventDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16721092BD5E79B00750D5B /* EventDetailScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +27,14 @@
 		C16720ED2BD5BE7C00750D5B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C16720EF2BD5BE7E00750D5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C16720F22BD5BE7E00750D5B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C16720F92BD5BEEB00750D5B /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		C16720FB2BD5BEFD00750D5B /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		C16720FD2BD5C17100750D5B /* Color+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+EXT.swift"; sourceTree = "<group>"; };
+		C16720FF2BD5C1F200750D5B /* UIColor+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+EXT.swift"; sourceTree = "<group>"; };
+		C16721032BD5C3EE00750D5B /* CreateEventScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventScreen.swift; sourceTree = "<group>"; };
+		C16721052BD5C85900750D5B /* CustomColorPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColorPickerView.swift; sourceTree = "<group>"; };
+		C16721072BD5D60F00750D5B /* EventCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCellView.swift; sourceTree = "<group>"; };
+		C16721092BD5E79B00750D5B /* EventDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +69,14 @@
 			children = (
 				C16720EB2BD5BE7C00750D5B /* PrepMateApp.swift */,
 				C16720ED2BD5BE7C00750D5B /* ContentView.swift */,
+				C16721072BD5D60F00750D5B /* EventCellView.swift */,
+				C16721032BD5C3EE00750D5B /* CreateEventScreen.swift */,
+				C16721092BD5E79B00750D5B /* EventDetailScreen.swift */,
+				C16721022BD5C30800750D5B /* Extension */,
+				C16721012BD5C2F900750D5B /* Model */,
 				C16720EF2BD5BE7E00750D5B /* Assets.xcassets */,
 				C16720F12BD5BE7E00750D5B /* Preview Content */,
+				C16721052BD5C85900750D5B /* CustomColorPickerView.swift */,
 			);
 			path = PrepMate;
 			sourceTree = "<group>";
@@ -65,6 +87,24 @@
 				C16720F22BD5BE7E00750D5B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C16721012BD5C2F900750D5B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C16720F92BD5BEEB00750D5B /* Event.swift */,
+				C16720FB2BD5BEFD00750D5B /* Todo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C16721022BD5C30800750D5B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C16720FD2BD5C17100750D5B /* Color+EXT.swift */,
+				C16720FF2BD5C1F200750D5B /* UIColor+EXT.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +177,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C16721042BD5C3EE00750D5B /* CreateEventScreen.swift in Sources */,
+				C16721082BD5D60F00750D5B /* EventCellView.swift in Sources */,
+				C16721062BD5C85900750D5B /* CustomColorPickerView.swift in Sources */,
 				C16720EE2BD5BE7C00750D5B /* ContentView.swift in Sources */,
+				C16720FA2BD5BEEB00750D5B /* Event.swift in Sources */,
 				C16720EC2BD5BE7C00750D5B /* PrepMateApp.swift in Sources */,
+				C16721002BD5C1F200750D5B /* UIColor+EXT.swift in Sources */,
+				C167210A2BD5E79B00750D5B /* EventDetailScreen.swift in Sources */,
+				C16720FC2BD5BEFD00750D5B /* Todo.swift in Sources */,
+				C16720FE2BD5C17100750D5B /* Color+EXT.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

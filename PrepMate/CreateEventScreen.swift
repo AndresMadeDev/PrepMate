@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct CreateEventScreen: View {
+    @Environment(\.dismiss) var dismiss
+    @Environment(\.modelContext) var modelContext
+    
     @State private var name: String = ""
+    @State private var date: Date = .now
     @State private var color: Color = .blue
     
     var body: some View {
@@ -28,14 +32,36 @@ struct CreateEventScreen: View {
                         .multilineTextAlignment(.center)
                 
             }
+            Section {
+                DatePicker("Event Date", selection: $date, in: date..., displayedComponents: .date)
+            }
             
-            ColorPicker("Event Color", selection: $color)
-                .font(.title)
+            Section {
+               CustomColorPickerView(selectedColor: $color)
+                
+                ColorPicker(selection: $color, label: {
+                    Text("Custom Color")
+                })
+            }
             
             
         }
         .navigationTitle("New Event")
         .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Button("Done") {
+                    let newEvent = Event(title: name, eventColor: color.toHexString()!, dayOfEvent: date)
+                    modelContext.insert(newEvent)
+                    dismiss()
+                }
+            }
+            ToolbarItem(placement: .topBarLeading) {
+                Button("Cancel") {
+                    dismiss()
+                }
+            }
+        }
       
         
     }

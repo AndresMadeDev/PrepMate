@@ -6,7 +6,9 @@
 //
 
 import Foundation
+import SwiftData
 
+@Model
 class Todo {
     var title: String = ""
     var detail: String = ""

@@ -8,11 +8,22 @@
 import SwiftUI
 
 struct EventDetailScreen: View {
+    @Bindable var event: Event
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            
+            TextField(event.title, text: $event.title)
+                .font(.largeTitle)
+                
+            HStack {
+                DatePicker( "Event Date", selection: $event.dayOfEvent, displayedComponents: .date)
+            }
+            
+            Spacer()
+        }
+        .padding()
     }
 }
 
-#Preview {
-    EventDetailScreen()
-}
+
